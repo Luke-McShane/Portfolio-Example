@@ -374,12 +374,12 @@ img {
 
   &-b {
     .contact-info {
-      display: flex;
-      text-align: center;
-    }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-    .card {
-      flex: 1;
+      .card {
+        text-align: center;
+      }
     }
   }
 

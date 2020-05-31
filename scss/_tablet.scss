@@ -1,0 +1,41 @@
+@media(max-width: 768px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content h2 {
+      font-size: 3.5rem;
+    }
+  }
+
+  #home {
+    &-a {
+      .specials {
+        gap: 0;
+      }
+    }
+
+    &-b {
+      .stats {
+        gap: 0;
+      }
+    }
+  }
+
+
+  #about-b {
+    .progress {
+      width: 95%;
+    }
+  }
+
+  #contact-a {
+    form {
+      width: 95%;
+    }
+
+    .text-input {
+      padding: 0.6rem 0.9rem !important;
+      font-size: 1rem !important;
+    }
+  }
+}

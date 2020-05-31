@@ -1,0 +1,130 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  // overflow: hidden;
+}
+
+%btn-shared {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    background: $main-colour;
+    color: $dark-colour;
+  }
+
+  &-light {
+    @extend %btn-shared;
+    background: $light-colour;
+    color: $dark-colour;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background: $dark-colour;
+    color: $light-colour;
+  }
+
+}
+
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover,
+button[class^="btn-"]:hover {
+  background-color: $main-colour;
+}
+
+.current {
+  border-bottom-color: $main-colour !important;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Padding and Margin
+.py {
+  &-1 {
+    padding: 1rem 0rem;
+  }
+
+  &-2 {
+    padding: 2rem 0rem;
+  }
+
+  &-3 {
+    padding: 3rem 0rem;
+  }
+
+  &-4 {
+    padding: 4rem 0rem;
+  }
+}
+
+.my {
+  &-1 {
+    margin: 1rem 0rem;
+  }
+
+  &-2 {
+    margin: 2rem 0rem;
+  }
+
+  &-3 {
+    margin: 3rem 0rem;
+  }
+
+  &-4 {
+    margin: 4rem 0rem;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  font-weight: 100;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  width: 3rem;
+  height: 2px;
+  background: $main-colour;
+  display: block;
+  margin: 0 auto 1rem auto
+}
+
+.bg-dark {
+  background: $dark-colour;
+  color: set-text-colour($dark-colour);
+}
+
+.bg-medium {
+  background: $medium-colour;
+  color: set-text-colour($medium-colour);
+}
+
+.bg-light {
+  background: $light-colour;
+  color: set-text-colour($light-colour);
+}
+
+.bg-main {
+  background: $main-colour;
+  color: set-text-colour($main-colour);
+}

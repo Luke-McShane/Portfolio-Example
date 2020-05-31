@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+  #header-home {
+    height: 30rem; }
+    #header-home .header-content {
+      padding-top: 5rem; } }
