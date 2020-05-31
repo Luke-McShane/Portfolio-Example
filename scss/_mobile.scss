@@ -1,8 +1,11 @@
 @media(max-width: 500px) {
+
+  // Overwrite any other grid-template and set the amount of grid-columns to one
   .grid-system {
     grid-template-columns: 1fr !important;
   }
 
+  // Increase the height of the header and reposition the background image so that its position matches that of the inner pages
   #header {
     &-home {
       height: 8rem;
@@ -11,6 +14,8 @@
       width: 100%;
       border-bottom: 3px solid $main-colour;
 
+      // Increase the height of the main-nav so that it will comfortably contain all information on a mobile screen.
+      // Also, change the flex direction and the flex properties so items are positioned and aligned more appropriately and elegantly
       #main-nav {
         height: 15rem;
         flex-direction: column;
@@ -58,23 +63,9 @@
         }
       }
     }
-
-    // &-c {
-    //   .fas {
-    //     width: 50px;
-    //     height: 50px;
-    //     line-height: 50px;
-
-    //     div {
-    //       width: 10px;
-    //       height: 10px;
-    //       line-height: 10px;
-    //       font-size: 1.4rem;
-    //     }
-    //   }
-    // }
   }
 
+  // Change the grid areas so that a single column serves all grid elements within
   #about {
     &-a {
       .about-info {
@@ -87,6 +78,7 @@
       }
     }
 
+    // Hide this section
     &-c {
       display: none;
     }
@@ -110,6 +102,7 @@
             'message';
         }
 
+        // Change the sizing of the button which pertains to the type 'submit'
         button[type="submit"] {
           font-size: 1.2rem;
           width: 75%;

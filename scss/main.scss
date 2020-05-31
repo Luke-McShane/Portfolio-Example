@@ -45,6 +45,7 @@ img {
   display: flex;
   justify-content: space-between;
 
+  // Create an inner flexbox that will house the website links
   ul {
     display: flex;
 
@@ -65,6 +66,8 @@ img {
 }
 
 #header {
+
+  // The home header will be a 'hero' section/showcase - that is, for laptops and tablets
   &-home {
     background: $bg-image no-repeat center right/cover;
     height: 100vh;
@@ -90,6 +93,7 @@ img {
     }
   }
 
+  // Create a smaller header for inner pages
   &-inner {
     color: $dark-colour;
     background: $bg-image no-repeat 20% 30%/cover;
@@ -100,6 +104,8 @@ img {
 }
 
 #home {
+
+  // Create a grid
   &-a {
     .specials {
       margin-top: 3rem;
@@ -107,6 +113,7 @@ img {
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
 
+      // Style the fontawesome icons
       .fas {
         color: $main-colour;
         padding-bottom: 0.4rem;
@@ -155,6 +162,7 @@ img {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
 
+      // Set a fontawesome icon that will be position relative so that the inner step number can be position absolute
       &-icon {
         position: relative;
         border-radius: 50%;
@@ -166,6 +174,7 @@ img {
         line-height: 70px;
         transition: all 1s;
 
+        // Scale the icon and the process step on hover, and change both colours using the set-text-colour function
         &:hover {
           width: 90px;
           height: 90px;
@@ -180,6 +189,7 @@ img {
         }
       }
 
+      // Position and style the process step
       &-step {
         position: absolute;
         border-radius: 50%;
@@ -204,10 +214,12 @@ img {
   &-a {
     .about-info {
       display: grid;
+      // Create a grid-area for this section
       grid-template-areas:
         'bio-image bio bio'
         'awd1 awd2 awd3';
 
+      // Set the grid areas
       .bio-image {
         grid-area: bio-image;
       }
@@ -243,6 +255,9 @@ img {
 
   // Section B
   &-b {
+
+    // Create a set of progress bars by creating this a set of divs with the class .progress which will contain the inner bars
+    // which will correspond to skill level
     .progress {
       height: 20px;
       overflow: hidden;
@@ -255,6 +270,7 @@ img {
         background: $main-colour;
       }
 
+      // Set the skill level for each skill
       &-1 {
         width: 95%;
       }
@@ -420,5 +436,7 @@ img {
   }
 }
 
+
+// Import the media queries at the end so that their data is not overwritten
 @import 'tablet';
 @import 'mobile';

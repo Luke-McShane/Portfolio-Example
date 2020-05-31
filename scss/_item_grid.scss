@@ -5,11 +5,14 @@
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+// Each .item houses the project information: the image, the overlay, and the descriptive text
 .item {
+  // Positioned relative so the overlay can be positioned absolute, pertaining to this container
   position: relative;
   background: $main-colour;
   overflow: hidden;
 
+  // Add the overlay
   &::after {
     content: '';
     position: absolute;
@@ -24,9 +27,8 @@
     transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
   }
 
-  // Bring in main colour overlay
+  // Bring in main colour overlay on hover 
   &:hover::after {
-    // transform: scale(2) translate(0, 0) rotate(-28deg);
     transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
   }
 
@@ -35,18 +37,25 @@
     transform: scale(1.2);
   }
 
+  // Bring in the text on hover and make it visible
   &:hover &-text {
     opacity: 1;
     transform: translateY(0);
   }
 
+  // 
   &-image {
     height: auto;
     transform: translateZ(0);
     display: block;
+    // The cubic-bezier defines the speed curve of the corresponding element
     transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
   }
 
+  // Without this, nothing will show.
+  // If the display is set to inline-block there is some added whitespace.
+  // Even if there is a height set, if there is no padding-top then nothing will show.
+  // The overflow is used to hide any excess image that does not fit in the container and would thus otherwise overflow onto another image
   &-image::before {
     content: '';
     display: block;
@@ -54,6 +63,8 @@
     overflow: hidden;
   }
 
+  // Position the img absolute, relative to its container and ensure it is position to the top-right and takes up the entire container
+  // available to it
   &-image img {
     position: absolute;
     top: 0;
@@ -63,6 +74,7 @@
     line-height: 0;
   }
 
+  // Do the same as above for the text, but set a delay so that the text comes in after the overlay and after the img has been scaled
   &-text {
     position: absolute;
     top: 0;
@@ -79,6 +91,7 @@
   }
 
   // Text-Wrap
+  // Set the text so it is in the center of the container
   &-text-wrap {
     position: absolute;
     width: 100%;
